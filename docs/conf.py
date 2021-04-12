@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'CLM-Norwaydoc'
+project = 'CLM-NorwayDoc'
 copyright = '2020, CLM-Norway'
 author = 'Sunniva Indrehus'
 
