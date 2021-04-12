@@ -3,7 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to helloWorld's documentation!
+Welcome to CLM-Norway's documentation!
+
+
+
+.. Note :: This documentation is not meant to be static and is a collaborative effort of the total team. If you spot anything wrong or would like to add information to the documentation, please send us a pull request or file an issue in our repository.
+
 ======================================
 
 .. toctree::
@@ -11,6 +16,8 @@ Welcome to helloWorld's documentation!
    :caption: Contents:
 
    autodoc
+   get
+   
 A small change
 
 Indices and tables
