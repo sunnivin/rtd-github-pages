@@ -23,7 +23,9 @@ Welcome to CLM-Norway's documentation!
 
    
 A small change
+
 mdeb test
+
 Indices and tables
 ==================
 
