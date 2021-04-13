@@ -25,3 +25,8 @@ This will return something like:
   nn1000k
 
 In the example above, two projects can be used (nn2806k and nn1000k). Then make sure you choose the right project when running CTSM.
+
+.. automodule:: hello
+  :members:
+  :undoc-members:
+ 
