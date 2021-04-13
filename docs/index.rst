@@ -11,8 +11,7 @@ Welcome to helloWorld's documentation!
    :caption: Contents:
 
    autodoc
-   
-One more test change
+
 
 Indices and tables
 ==================
