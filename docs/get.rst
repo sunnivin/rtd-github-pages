@@ -108,7 +108,31 @@ Clone CTSM from ESCOMP
 Change into the new directory
 ::
     cd CTSM
+    
+Create a local branch 
+::
+    git checkout master -b my_branch_name
 
-$ git checkout master -b my_branch
-$ ./manage_externals/checkout_externals
-$ cd cime/config/cesm/machines
+For later reference, it is usefull to choose my_branch_name according to function and include the version and your username.
+
+To fetch the proper externals (CIME, FATES, etc.) run
+
+::
+
+    ./manage_externals/checkout_externals
+
+Now you need to add machine specifics for the norwegian clusters. This is done by replacing some default configuration files with configuration files that contain details for these clusters. 
+:: 
+    cd cime/config/cesm/machines
+Delete the default files 
+::
+    rm config_machines.xml config_batch.xml config_compilers.xml
+    
+Fetch replacementfiles from https://github.com/gunnartl/config_files_sigma2.git
+::
+    git init
+    git remote add origin https://github.com/gunnartl/config_files_sigma2.git
+    git pull origin main
+    
+
+
