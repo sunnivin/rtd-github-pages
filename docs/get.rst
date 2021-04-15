@@ -94,3 +94,21 @@ You should be ready to create your first case.
 
 From ESCOMP hub (NCAR)?
 +++++++++++++++++++++++
+
+This tutorial assumes that you are logged into one of the clusters (fram or saga) at sigma2. For access to those see (future referance to prerequisites section).
+
+Start from your home folder
+::
+    cd
+
+Clone CTSM from ESCOMP
+::
+    git clone --origin escomp https://github.com/ESCOMP/CTSM.git CTSM
+
+Change into the new directory
+::
+    cd CTSM
+
+$ git checkout master -b my_branch
+$ ./manage_externals/checkout_externals
+$ cd cime/config/cesm/machines
