@@ -1,12 +1,12 @@
 Get CTSM 
 =========
 
-That's where you should start.
+This is where you should start.
 
-NordicESMhub maintains a CTSM repository with all the configuration files for running on machines in the Nordics. For now we support:
+NordicESMhub maintains a CTSM repository with all the configuration files for running on machines supported by `Sigma2 <https://www.sigma2.no/>`_. For now we support:
 
-- saga (sigma2, Norway)
-- fram (sigma2, Norway)
+- saga 
+- fram 
 
 If your machine is not in the list and you would like us to support it, please contact us.
 
@@ -66,33 +66,7 @@ Which branch do I run?
 How to get CTSM (for developers)
 --------------------------------
 
-From NordicESM hub?
-+++++++++++++++++++
-Follow the steps above, but checkout the fates_emerald_api instead
-    
-::
-
-    git checkout fates_emerald_api -b new_branch_name
-
-For later reference, it is usefull to choose new_branch_name according to function and include the version and your username, e.g. username_fates_emerald_api.
-After checking out the externals, change to cime directory and create your own branch to record all your changes
-
-:: 
-
-    cd externals/cime
-    git checkout -b username_cime
-    
-Change to fates directory and create your own branch to record all your changes
-
-::
-
-    cd externals/fates
-    git checkout -b username_fates
-  
-If you do not create your own branch for "cime" and "fates", running "./manage_externals/checkout_externals", will overwrite your previous "cime" and "fates".
-You should be ready to create your first case.
-
-From ESCOMP hub (NCAR)?
+From `ESCOMP-hub <https://github.com/ESCOMP/CTSM>`_ (recommended)?
 +++++++++++++++++++++++
 
 This tutorial assumes that you are logged into one of the clusters (fram or saga) at sigma2. For access to those see (future referance to prerequisites section).
@@ -134,5 +108,30 @@ Fetch replacementfiles from https://github.com/gunnartl/config_files_sigma2.git
     git remote add origin https://github.com/gunnartl/config_files_sigma2.git
     git pull origin main
     
+From NordicESM hub?
++++++++++++++++++++
+Follow the steps above, but checkout the fates_emerald_api instead
+    
+::
+
+    git checkout fates_emerald_api -b new_branch_name
+
+For later reference, it is usefull to choose new_branch_name according to function and include the version and your username, e.g. username_fates_emerald_api.
+After checking out the externals, change to cime directory and create your own branch to record all your changes
+
+:: 
+
+    cd externals/cime
+    git checkout -b username_cime
+    
+Change to fates directory and create your own branch to record all your changes
+
+::
+
+    cd externals/fates
+    git checkout -b username_fates
+  
+If you do not create your own branch for "cime" and "fates", running "./manage_externals/checkout_externals", will overwrite your previous "cime" and "fates".
+You should be ready to create your first case.
 
 
