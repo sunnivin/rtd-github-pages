@@ -136,18 +136,20 @@ Now you need to add machine specifics for the norwegian clusters. This can be do
     * 1. You can replace some default configuration files with configuration files that contain details for these clusters. 
     * 2. You can create a `.cime` folder with the machine configurations under your home diretory. 
 
-For method (1) above execute the following steps: 
+*For method (1) above execute the following steps*: 
 :: 
     cd cime/config/cesm/machines
 Delete the default files 
 ::
     rm config_machines.xml config_batch.xml config_compilers.xml
     
-Fetch replacementfiles from https://github.com/gunnartl/config_files_sigma2.git
+Fetch replacementfiles from `this <https://github.com/gunnartl/config_files_sigma2.git>`_ repository
 ::
     git init
     git remote add origin https://github.com/gunnartl/config_files_sigma2.git
     git pull origin main
     
-For method (2) above clone the following `repository <https://github.com/MetOs-UiO/dotcime>`_ and consult the `README.md` file for details.  
+*For method (2) above:* 
+
+Clone `this <https://github.com/MetOs-UiO/dotcime>`_ repository and consult the `README.md` file for details for making a new case.  
 
