@@ -3,7 +3,7 @@ Recommended spin-up routine for CTSM
 Single cell example: Brazil
 
 .. figure:: figures/spinup_brazil_example.png
-    :width: 400
+    :width: 100
     :alt: example spin up
     
     Fig.1 Example spin-up for single cell case Brazil. The red boxes indicate 100 years of accelerated spin-up. 
@@ -41,6 +41,7 @@ How to perform a spin-up?
 - See the necessary XML change commands below.
 
 1. Accelerated decomposition (reduced size of carbon pools)
+   
 .. code-block:: bash
 
     ./xmlchange CLM_FORCE_COLDSTART="on"
@@ -67,6 +68,7 @@ How to perform a spin-up?
 
 
 2. Normal spin-up (original size of carbon pools)
+   
 .. code-block:: bash
     
     # Switch off cold start
