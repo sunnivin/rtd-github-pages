@@ -142,16 +142,6 @@ To run for the Brazil test site do the following:
 
 
 **Remark**: make sure you set **CESM_ACCOUNT** to your project.
-Customized
-~~~~~~~~~~~
-
-- Step-1: 
-
-.. include:: Tutorial_creating_surface_data_for_single_point.rst
-
-- Step-2: For atmospheric forcing (own atm forcing and surface data) (include scripts)
-
-.. include:: README_Single_point.rst 
 
 
 Change configuration

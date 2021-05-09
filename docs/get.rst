@@ -66,8 +66,14 @@ Which branch do I run?
 How to get CTSM (for developers)
 --------------------------------
 
-From NordicESM hub?
+Dependent on which project you wish to contribute to you might want to start your development from different versions of CTSM. For the CLM-Norway team we have to mainly two startingpoints: 
+
+ * The `NordicESM-hub <https://github.com/NordicESMhub/ctsm>`_ (note that this is a project for developers in the Nordics)
+ * The latest version of the original `CTSM <https://github.com/ESCOMP/CTSM>`_ (this is the original version of CTSM developed by NCAR)
+
+From the `NordicESM-hub <https://github.com/NordicESMhub/ctsm>`_
 +++++++++++++++++++
+
 Follow the steps above, but checkout the fates_emerald_api instead
     
 ::
@@ -92,5 +98,58 @@ Change to fates directory and create your own branch to record all your changes
 If you do not create your own branch for "cime" and "fates", running "./manage_externals/checkout_externals", will overwrite your previous "cime" and "fates".
 You should be ready to create your first case.
 
-From ESCOMP hub (NCAR)?
+From the latest version of `CTSM <https://github.com/ESCOMP/CTSM>`_
 +++++++++++++++++++++++
+
+This tutorial assumes that you are logged into one of the clusters (fram or saga) at sigma2. For access to those see (future referance to prerequisites section).
+
+Start from your home folder
+::
+    cd
+
+Clone CTSM from ESCOMP
+::
+    git clone --origin escomp https://github.com/ESCOMP/CTSM.git CTSM
+
+Change into the new directory
+::
+    cd CTSM
+    
+Create a local branch 
+::
+    git checkout master -b my_branch_name
+
+For later reference, it is usefull to choose my_branch_name according to function and include the version and your username.
+
+To fetch the proper externals (CIME, FATES, etc.) run
+
+::
+
+    ./manage_externals/checkout_externals
+
+
+Porting of cime 
++++++++++++++++++++++++
+
+Now you need to add machine specifics for the norwegian clusters. This can be done in two ways(check the `original <https://esmci.github.io/cime/versions/master/html/users_guide/porting-cime.html#steps-for-porting>`_ documentation for a more detailed explanation): 
+
+    * 1. You can replace some default configuration files with configuration files that contain details for these clusters. 
+    * 2. You can create a `.cime` folder with the machine configurations under your home diretory. 
+
+*For method (1) above execute the following steps*: 
+:: 
+    cd cime/config/cesm/machines
+Delete the default files 
+::
+    rm config_machines.xml config_batch.xml config_compilers.xml
+    
+Fetch replacementfiles from `this <https://github.com/gunnartl/config_files_sigma2.git>`_ repository
+::
+    git init
+    git remote add origin https://github.com/gunnartl/config_files_sigma2.git
+    git pull origin main
+    
+*For method (2) above:* 
+
+Clone `this <https://github.com/MetOs-UiO/dotcime>`_ repository and consult the `README.md` file for details for making a new case.  
+
