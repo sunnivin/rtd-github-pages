@@ -11,6 +11,7 @@ Welcome to helloWorld's documentation!
    :caption: Contents:
 
    autodoc
+   spinup
 
 
 Indices and tables
