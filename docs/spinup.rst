@@ -2,7 +2,7 @@ Recommended spin-up routine for CTSM
 =====================================
 Single cell example: Brazil
 
-.. figure:: figures/spinup_brazil_example.png
+.. figure:: doc/figures/spinup_brazil_example.png
     :width: 100
     :alt: example spin up
     
