@@ -21,8 +21,6 @@ Welcome to CLM-Norway's documentation!
    run
    spinup
 
-   
-A small change
 
 Indices and tables
 ==================
