@@ -131,6 +131,7 @@ To fetch the proper externals (CIME, FATES, etc.) run
 Porting of cime 
 +++++++++++++++++++++++
 
+
 Now you need to add machine specifics for the norwegian clusters. This can be done in two ways(check the `original <https://esmci.github.io/cime/versions/master/html/users_guide/porting-cime.html#steps-for-porting>`_ documentation for a more detailed explanation): 
 
     * 1. You can replace some default configuration files with configuration files that contain details for these clusters. 
@@ -152,4 +153,5 @@ Fetch replacementfiles from `this <https://github.com/gunnartl/config_files_sigm
 *For method (2) above:* 
 
 Clone `this <https://github.com/MetOs-UiO/dotcime>`_ repository and consult the `README.md` file for details for making a new case.  
+
 
