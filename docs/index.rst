@@ -15,7 +15,7 @@ Welcome to CLM-Norway's documentation!
    :maxdepth: 2
    :caption: Contents:
    
-   prerequisites
+   prereqs
    get
    setup
    run
