@@ -1,7 +1,14 @@
 Follow the below procedure to run CTSM over a specific region of interest for a specific resolution.
-For example, run over Scandinavia region (latitude 41N to 48N, longitude 4E to 42E) at 0.5 degree resolution:
-Produce the domain and surface data files using the python script subset_sruface.py provided under the CTSM tools directory (~/ctsm/tools/contrib/).
+For example, to run over Scandinavia region (latitude 41N to 48N, longitude 4E to 42E) at 0.5 degree resolution:
+First produce the domain and surface data files using the python script subset_surfdata.py provided under the CTSM tools directory (~/ctsm/tools/contrib/).
 
+Domain and surface data
+~~~~~~~~~~~~~~~~~~~~~~~
+Change the variables ln1,ln2, lt1 and lt2 in the subset_surfdata.py.
+For example see the python file here: 
+https://github.com/devarajun/CTSM/blob/master/tools/contrib/subset_surfdata
+
+This python script produces the domain file and surface data file.
 
 ::
 
