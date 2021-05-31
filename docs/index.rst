@@ -20,7 +20,7 @@ Welcome to CLM-Norway's documentation!
    setup
    run
    spinup
-
+small change
 
 Indices and tables
 ==================
