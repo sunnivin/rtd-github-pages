@@ -1,4 +1,20 @@
-Run CTSM over a specific region for a specific resolution.                                                                                                                                                                                                                                                                                                  Below procedure explains the regional model run over Scandinavia at 0.5 degree spatial resolution on FRAM/SAGA.                                                                                                                                                                                                                                             Required input files (domain and surface data) need to be produced first.                                                                                                                                                                                                                                                                                   To produce the domain and surface data files use the python script subset_surfdata provided under                                                                             the ctsm tools directory (~/ctsm/tools/contrib/).                                                                                                                                                                                                                                                                                                           For using the other inputdata files, start with linking the main inputdata files to your working directory.
+Follow the below procedure to run CTSM over a specific region of interest for a specific resolution.
+For example, to run over Scandinavia region (latitude 41N to 48N, longitude 4E to 42E) at 0.5 degree resolution:
+First produce the domain and surface data files using the python script subset_surfdata.py provided under the CTSM tools directory (~/ctsm/tools/contrib/).
+
+Domain and surface data
+~~~~~~~~~~~~~~~~~~~~~~~
+Change the variable values ln1 to 4.0,ln2 to 42.0, lt1 to 41.0 and lt2 to 48.0 in the subset_surfdata.py.
+The python script file here:
+https://github.com/devarajun/CTSM/blob/master/tools/contrib/subset_surfdata
+
+This python script produces the domain file and surface data file.
+
+Inputdata
+~~~~~~~~~
+Other inputdata files are needed, so start linking the main inputdata files (under shared directory) in your
+working directory.
+
 
 ::
 
