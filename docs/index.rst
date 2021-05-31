@@ -20,7 +20,7 @@ Welcome to CLM-Norway's documentation!
    setup
    run
    spinup
-small change
+
 
 Indices and tables
 ==================
@@ -28,3 +28,5 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+small change
