@@ -1,13 +1,26 @@
-Here, the regional case procedure is explained for running the model over Fennoscandia and Svalbard region at 0.25 degree spatial resolution on Abel.
+Follow the below procedure to run CTSM over a specific region of interest for a specific resolution.
+For example, to run over Scandinavia region (latitude 41N to 48N, longitude 4E to 42E) at 0.5 degree resolution:
+First produce the domain and surface data files for the region using the python script subset_surfdata.py available under the CTSM tools directory (~/ctsm/tools/contrib/).
 
-Required input files (domain and surface data) are already produced and stored under the main inputdata directory. So, start with linking the main inputdata files to your working directory.
+Domain and surface data
+~~~~~~~~~~~~~~~~~~~~~~~
+Change the variable values ln1 to 4.0,ln2 to 42.0, lt1 to 41.0 and lt2 to 48.0 in the subset_data.py.
+The python script file here:
+https://github.com/ESCOMP/CTSM/blob/master/tools/contrib/subset_data.py
+
+This python script produces the domain file and surface data file.
+
+Inputdata
+~~~~~~~~~
+Other inputdata files are needed:
+
+Use the already available inputdata stored under shared directory on both FRAM and SAGA machines.
 
 ::
 
-    cd ~/ctsm/cime/scripts
-    ./link_dirtree $CESM_DATA /work/users/$USER/inputdata
-    export MYCTSMDATA=/work/users/$USER/inputdata
-
+    To use the atmospheric forcing data do the following:
+    export ATMDATA=/cluster/shared/noresm/inputdata/atm/datm7/
+    
 Definitions
 ~~~~~~~~~~~
 As mentioned earlier in this documentation, you need to define your project account (e.g. nn2806k) before running the model. To be sure that you are using the correct version of netcdf and practical purposes, we will export the paths and some environment variables :
