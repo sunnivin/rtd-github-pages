@@ -1,6 +1,6 @@
 Follow the below procedure to run CTSM over a specific region of interest for a specific resolution.
 For example, to run over Scandinavia region (latitude 41N to 48N, longitude 4E to 42E) at 0.5 degree resolution:
-First produce the domain and surface data files using the python script subset_surfdata.py provided under the CTSM tools directory (~/ctsm/tools/contrib/).
+First produce the domain and surface data files for the region using the python script subset_surfdata.py available under the CTSM tools directory (~/ctsm/tools/contrib/).
 
 Domain and surface data
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -12,16 +12,14 @@ This python script produces the domain file and surface data file.
 
 Inputdata
 ~~~~~~~~~
-Other inputdata files are needed, so start linking the main inputdata files (under shared directory) in your
-working directory.
+Other inputdata files are needed:
 
+Use the already available inputdata stored under shared directory on both FRAM and SAGA machines.
 
 ::
-
-    cd ~/ctsm/cime/scripts
-    ./link_dirtree $CESM_DATA /work/users/$USER/inputdata
-    export MYCTSMDATA=/work/users/$USER/inputdata
-
+    To use the atmospheric forcing data do the following:
+    export ATMDATA=/cluster/shared/noresm/inputdata/atm/datm7/
+    
 Definitions
 ~~~~~~~~~~~
 As mentioned earlier in this documentation, you need to define your project account (e.g. nn2806k) before running the model. To be sure that you are using the correct version of netcdf and practical purposes, we will export the paths and some environment variables :
