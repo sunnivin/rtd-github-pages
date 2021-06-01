@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Get CTSM &mdash; documentación de CLM-NorwayDoc - 1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Setup CTSM" href="setup.html" />
+    <link rel="prev" title="Prerequisites" href="prereqs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CLM-NorwayDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prereqs.html">Prerequisites</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Get CTSM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-get-ctsm-for-users">How to get CTSM (for users)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-get-a-specific-branch">How to get a specific branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#which-branch-do-i-run">Which branch do I run?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-get-ctsm-for-developers">How to get CTSM (for developers)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#from-the-nordicesm-hub">From the NordicESM-hub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-the-latest-version-of-ctsm">From the latest version of CTSM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#porting-of-cime">Porting of cime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup CTSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run.html">Run CTSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spinup.html">Recommended spin-up routine for CTSM</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CLM-NorwayDoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Get CTSM</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/sunnivin/rtd-github-pages/blob/master/docs/get.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="get-ctsm">
+<h1>Get CTSM<a class="headerlink" href="#get-ctsm" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>That’s where you should start.</p>
+<p>NordicESMhub maintains a CTSM repository with all the configuration files for running on machines in the Nordics. For now we support:</p>
+<ul class="simple">
+<li><p>saga (sigma2, Norway)</p></li>
+<li><p>fram (sigma2, Norway)</p></li>
+</ul>
+<p>If your machine is not in the list and you would like us to support it, please contact us.</p>
+<p>For compatibility, load git version 2.23.0 or higher on your super computer</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="o">/</span><span class="mf">2.23.0</span><span class="o">-</span><span class="n">GCCcore</span><span class="o">-</span><span class="mf">8.3.0</span>
+</pre></div>
+</div>
+<section id="how-to-get-ctsm-for-users">
+<h2>How to get CTSM (for users)<a class="headerlink" href="#how-to-get-ctsm-for-users" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>To get the FATES EMERALD platform version, CLONE from NordicESM hub</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git clone -b release-clm5.0 https://github.com/NordicESMhub/ctsm.git ${HOME}/ctsm_fates_emerald
+</pre></div>
+</div>
+<p>In this example we are checking out the release-clm5.0 tag and create a new local branch (recomended).
+The destination of the checkout is a directoy (e.g. ctsm_fates_emerald) in our home directory.</p>
+<section id="how-to-get-a-specific-branch">
+<h3>How to get a specific branch<a class="headerlink" href="#how-to-get-a-specific-branch" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Change into the created ctsm directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ${HOME}/ctsm_fates_emerald
+</pre></div>
+</div>
+<p>Check all existing branches</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">--</span><span class="nb">all</span>
+</pre></div>
+</div>
+<p>To checkout the FATES EMERALD platform (in this example release 2.0.1) into a new local branch (e.g. new_branch_name)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">release</span><span class="o">-</span><span class="n">emerald</span><span class="o">-</span><span class="n">platform2</span><span class="mf">.0.1</span> <span class="o">-</span><span class="n">b</span> <span class="n">new_branch_name</span>
+</pre></div>
+</div>
+<p>For later reference, it is usefull to choose new_branch_name according to function and include the version and your username, e.g. username_release-emerald-platform2.0.1.</p>
+<p>To fetch the proper externals (CIME, FATES, etc.) run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">manage_externals</span><span class="o">/</span><span class="n">checkout_externals</span>
+</pre></div>
+</div>
+<p>from the main ctsm directory (we are going to call this $CTSM_ROOT from now on).
+All should be set by this and you should be able to create your first case.</p>
+</section>
+<section id="which-branch-do-i-run">
+<h3>Which branch do I run?<a class="headerlink" href="#which-branch-do-i-run" title="Enlazar permanentemente con este título">¶</a></h3>
+</section>
+</section>
+<section id="how-to-get-ctsm-for-developers">
+<h2>How to get CTSM (for developers)<a class="headerlink" href="#how-to-get-ctsm-for-developers" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Dependent on which project you wish to contribute to you might want to start your development from different versions of CTSM. For the CLM-Norway team we have to mainly two startingpoints:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <a class="reference external" href="https://github.com/NordicESMhub/ctsm">NordicESM-hub</a> (note that this is a project for developers in the Nordics)</p></li>
+<li><p>The latest version of the original <a class="reference external" href="https://github.com/ESCOMP/CTSM">CTSM</a> (this is the original version of CTSM developed by NCAR)</p></li>
+</ul>
+</div></blockquote>
+<section id="from-the-nordicesm-hub">
+<h3>From the <a class="reference external" href="https://github.com/NordicESMhub/ctsm">NordicESM-hub</a><a class="headerlink" href="#from-the-nordicesm-hub" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Follow the steps above, but checkout the fates_emerald_api instead</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">fates_emerald_api</span> <span class="o">-</span><span class="n">b</span> <span class="n">new_branch_name</span>
+</pre></div>
+</div>
+<p>For later reference, it is usefull to choose new_branch_name according to function and include the version and your username, e.g. username_fates_emerald_api.
+After checking out the externals, change to cime directory and create your own branch to record all your changes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">externals</span><span class="o">/</span><span class="n">cime</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">username_cime</span>
+</pre></div>
+</div>
+<p>Change to fates directory and create your own branch to record all your changes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">externals</span><span class="o">/</span><span class="n">fates</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">username_fates</span>
+</pre></div>
+</div>
+<p>If you do not create your own branch for «cime» and «fates», running «./manage_externals/checkout_externals», will overwrite your previous «cime» and «fates».
+You should be ready to create your first case.</p>
+</section>
+<section id="from-the-latest-version-of-ctsm">
+<h3>From the latest version of <a class="reference external" href="https://github.com/ESCOMP/CTSM">CTSM</a><a class="headerlink" href="#from-the-latest-version-of-ctsm" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>This tutorial assumes that you are logged into one of the clusters (fram or saga) at sigma2. For access to those see (future referance to prerequisites section).</p>
+<p>Start from your home folder</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
+</pre></div>
+</div>
+<p>Clone CTSM from ESCOMP</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">origin</span> <span class="n">escomp</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ESCOMP</span><span class="o">/</span><span class="n">CTSM</span><span class="o">.</span><span class="n">git</span> <span class="n">CTSM</span>
+</pre></div>
+</div>
+<p>Change into the new directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">CTSM</span>
+</pre></div>
+</div>
+<p>Create a local branch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span> <span class="o">-</span><span class="n">b</span> <span class="n">my_branch_name</span>
+</pre></div>
+</div>
+<p>For later reference, it is usefull to choose my_branch_name according to function and include the version and your username.</p>
+<p>To fetch the proper externals (CIME, FATES, etc.) run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">manage_externals</span><span class="o">/</span><span class="n">checkout_externals</span>
+</pre></div>
+</div>
+</section>
+<section id="porting-of-cime">
+<h3>Porting of cime<a class="headerlink" href="#porting-of-cime" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Now you need to add machine specifics for the norwegian clusters. This can be done in two ways(check the <a class="reference external" href="https://esmci.github.io/cime/versions/master/html/users_guide/porting-cime.html#steps-for-porting">original</a> documentation for a more detailed explanation):</p>
+<blockquote>
+<div><ul class="simple">
+<li><ol class="arabic simple">
+<li><p>You can replace some default configuration files with configuration files that contain details for these clusters.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>You can create a <cite>.cime</cite> folder with the machine configurations under your home diretory.</p></li>
+</ol>
+</li>
+</ul>
+</div></blockquote>
+<p><em>For method (1) above execute the following steps</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">cime</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">cesm</span><span class="o">/</span><span class="n">machines</span>
+</pre></div>
+</div>
+<p>Delete the default files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="n">config_machines</span><span class="o">.</span><span class="n">xml</span> <span class="n">config_batch</span><span class="o">.</span><span class="n">xml</span> <span class="n">config_compilers</span><span class="o">.</span><span class="n">xml</span>
+</pre></div>
+</div>
+<p>Fetch replacementfiles from <a class="reference external" href="https://github.com/gunnartl/config_files_sigma2.git">this</a> repository</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">gunnartl</span><span class="o">/</span><span class="n">config_files_sigma2</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p><em>For method (2) above:</em></p>
+<p>Clone <a class="reference external" href="https://github.com/MetOs-UiO/dotcime">this</a> repository and consult the <cite>README.md</cite> file for details for making a new case.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="setup.html" class="btn btn-neutral float-right" title="Setup CTSM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="prereqs.html" class="btn btn-neutral float-left" title="Prerequisites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, CLM-Norway
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+          
+          <dd><a href="/rtd-github-pages/en/master/">en</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/rtd-github-pages/es/master/">es</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+          
+          <dd><a href="/rtd-github-pages/es/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/rtd-github-pages/es/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/rtd-github-pages/es/master/CLM-NorwayDoc-docs_es_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/rtd-github-pages/es/master/CLM-NorwayDoc-docs_es_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

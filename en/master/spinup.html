@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Recommended spin-up routine for CTSM &mdash; CLM-NorwayDoc 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Run CTSM" href="run.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CLM-NorwayDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prereqs.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get.html">Get CTSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup CTSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run.html">Run CTSM</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Recommended spin-up routine for CTSM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-do-we-do-a-spin-up">Why do we do a spin-up?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#which-variables-are-important-to-check">Which variables are important to check?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-long-should-a-spin-up-be">How long should a spin-up be?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-does-equilibrium-mean">What does equilibrium mean?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-perform-a-spin-up">How to perform a spin-up?</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CLM-NorwayDoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Recommended spin-up routine for CTSM</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/sunnivin/rtd-github-pages/blob/master/docs/spinup.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="recommended-spin-up-routine-for-ctsm">
+<h1>Recommended spin-up routine for CTSM<a class="headerlink" href="#recommended-spin-up-routine-for-ctsm" title="Permalink to this headline">¶</a></h1>
+<p>Single cell example: Brazil</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="doc/figures/spinup_brazil_example.png"><img alt="example spin up" src="doc/figures/spinup_brazil_example.png" style="width: 100px;" /></a>
+<figcaption>
+<p><span class="caption-text">Fig.1 Example spin-up for single cell case Brazil. The red boxes indicate 100 years of accelerated spin-up.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="why-do-we-do-a-spin-up">
+<h2>Why do we do a spin-up?<a class="headerlink" href="#why-do-we-do-a-spin-up" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The idea behind doing a so-called <strong>*spin-up*</strong> is to reach an equilibrium state in your model.</p></li>
+<li><p>Typically any perturbation (e.g. 2x CO2) experiment starts from such a state.</p></li>
+<li><p>Running our perturbed system into equilibrium again will give you the maximum impact of the perturbation.</p></li>
+</ul>
+</section>
+<section id="which-variables-are-important-to-check">
+<h2>Which variables are important to check?<a class="headerlink" href="#which-variables-are-important-to-check" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Since we are interested in the equilibrium state of our system, the “slowest” variables matter the most (e.g. terrestrial soil carbon).</p></li>
+<li><p>If you are running in BioGeoChemistry (BGC) mode, it is important to check the “health” of your vegetation.</p></li>
+<li><p>The variable directly associated with the health is Total Leaf Area Index (TLAI).</p></li>
+<li><p>If this is 0 your vegetation is dead and something went really wrong.</p></li>
+</ul>
+</section>
+<section id="how-long-should-a-spin-up-be">
+<h2>How long should a spin-up be?<a class="headerlink" href="#how-long-should-a-spin-up-be" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The overall duration (years before an equilibrium state is reached) varies.</p></li>
+<li><p>As mentioned above, the variables with the slowest turnover rate will define the time you’d need to spend for your spin-up.</p></li>
+<li><p>The rule of thumb for single-cell simulation is the higher the latitude the longer the spin-up.</p></li>
+<li><p>Spinning up a single cell case in the Tropics will approximately take 2x100 years after which the terrestrial carbon pools are in equilibrium (Fig.1).</p></li>
+<li><p>In the polar regions, it will take a couple of 1000 years!</p></li>
+</ul>
+</section>
+<section id="what-does-equilibrium-mean">
+<h2>What does equilibrium mean?<a class="headerlink" href="#what-does-equilibrium-mean" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Typically you’d cycle through a range of given meteorological years - referred to as time-slice (e.g. 1990-2000).</p></li>
+<li><p>After an initial rapid increase/decrease in your variables, you will start to see the interannual variability of the chosen time slice (wiggling).</p></li>
+<li><p>Equilibrium is reached as soon as consecutive time slices differ by less than a threshold that you have to choose (&lt; 0.1-1%).</p></li>
+</ul>
+</section>
+<section id="how-to-perform-a-spin-up">
+<h2>How to perform a spin-up?<a class="headerlink" href="#how-to-perform-a-spin-up" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Usually, we do a two-staged spin-up.</p></li>
+<li><p>See the necessary XML change commands below.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Accelerated decomposition (reduced size of carbon pools)</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmlchange <span class="nv">CLM_FORCE_COLDSTART</span><span class="o">=</span><span class="s2">&quot;on&quot;</span>
+./xmlchange <span class="nv">CLM_NML_USE_CASE</span><span class="o">=</span><span class="s2">&quot;2000_control&quot;</span>
+./xmlchange <span class="nv">DATM_CLMNCEP_YR_START</span><span class="o">=</span><span class="s2">&quot;1991&quot;</span>
+./xmlchange <span class="nv">DATM_CLMNCEP_YR_END</span><span class="o">=</span><span class="s2">&quot;2010&quot;</span>
+./xmlchange <span class="nv">DATM_PRESAERO</span><span class="o">=</span><span class="s2">&quot;clim_2000&quot;</span>
+./xmlchange <span class="nv">CCSM_CO2_PPMV</span><span class="o">=</span><span class="s2">&quot;369.&quot;</span>
+./xmlchange <span class="nv">STOP_OPTION</span><span class="o">=</span><span class="s2">&quot;nyears&quot;</span>
+./xmlchange <span class="nv">RUN_REFDATE</span><span class="o">=</span><span class="s2">&quot;0001-01-01&quot;</span>
+./xmlchange <span class="nv">RUN_STARTDATE</span><span class="o">=</span><span class="s2">&quot;0001-01-01&quot;</span>
+<span class="c1">#Additional xml changes for AD mode</span>
+./xmlchange <span class="nv">CLM_ACCELERATED_SPINUP</span><span class="o">=</span><span class="s2">&quot;on&quot;</span>
+<span class="c1">#Number of years for spin-up</span>
+<span class="c1">#For Tropics only STOP_N=100 is needed!</span>
+./xmlchange <span class="nv">STOP_N</span><span class="o">=</span><span class="m">100</span>
+<span class="c1">#Frequency of restart files (1/4 of STOP_N)</span>
+./xmlchange <span class="nv">REST_N</span><span class="o">=</span><span class="m">25</span>
+<span class="c1">#Setting wall clock time (on saga 5 years / 30 min)</span>
+<span class="c1">#./xmlchange --subgroup case.st_archive JOB_WALLCLOCK_TIME=36:00:00</span>
+./xmlchange <span class="nv">JOB_WALLCLOCK_TIME</span><span class="o">=</span><span class="m">36</span>:00:00
+./case.setup
+./preview_namelists
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Normal spin-up (original size of carbon pools)</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Switch off cold start</span>
+./xmlchange <span class="nv">CLM_FORCE_COLDSTART</span><span class="o">=</span><span class="s2">&quot;off&quot;</span>
+./xmlchange <span class="nv">CONTINUE_RUN</span><span class="o">=</span><span class="s2">&quot;FALSE&quot;</span>
+<span class="c1">#Re-use directory but re-define reference time</span>
+./xmlchange <span class="nv">RUN_REFDATE</span><span class="o">=</span><span class="s2">&quot;0401-01-01&quot;</span>
+./xmlchange <span class="nv">RUN_STARTDATE</span><span class="o">=</span><span class="s2">&quot;0401-01-01&quot;</span>
+<span class="c1">#Additional xml changes for AD mode</span>
+./xmlchange <span class="nv">CLM_ACCELERATED_SPINUP</span><span class="o">=</span><span class="s2">&quot;off&quot;</span>
+./xmlchange <span class="nv">STOP_N</span><span class="o">=</span><span class="m">100</span>
+<span class="c1">#Frequency of restart files (1/4 of STOP_N)</span>
+./xmlchange <span class="nv">REST_N</span><span class="o">=</span><span class="m">25</span>
+<span class="c1">#Setting wall clock time</span>
+<span class="c1">#./xmlchange --subgroup case.st_archive JOB_WALLCLOCK_TIME=36:00:00</span>
+./xmlchange <span class="nv">JOB_WALLCLOCK_TIME</span><span class="o">=</span><span class="m">36</span>:00:00
+./case.setup
+<span class="c1">#Point to restart file (IMPORTANT: Do not forget the single-quotation marks &#39;&lt;path to restart file&gt;&#39;)</span>
+<span class="nb">echo</span> <span class="s2">&quot;finidat = &#39;</span><span class="si">${</span><span class="nv">restart_file</span><span class="si">}</span><span class="s2">&#39;&quot;</span> &gt;&gt; user_nl_clm
+<span class="nb">echo</span> <span class="s2">&quot;Restart file: </span><span class="si">${</span><span class="nv">restart_file</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="run.html" class="btn btn-neutral float-left" title="Run CTSM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, CLM-Norway
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+           <strong> 
+          <dd><a href="/rtd-github-pages/en/master/">en</a></dd>
+           </strong> 
+        
+          
+          <dd><a href="/rtd-github-pages/es/master/">es</a></dd>
+          
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+          
+          <dd><a href="/rtd-github-pages/en/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/rtd-github-pages/en/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/rtd-github-pages/en/master/CLM-NorwayDoc-docs_en_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/rtd-github-pages/en/master/CLM-NorwayDoc-docs_en_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

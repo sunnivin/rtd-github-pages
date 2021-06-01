@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Domain and surface data &mdash; CLM-NorwayDoc 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CLM-NorwayDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prereqs.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get.html">Get CTSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup CTSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run.html">Run CTSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spinup.html">Recommended spin-up routine for CTSM</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CLM-NorwayDoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Domain and surface data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/sunnivin/rtd-github-pages/blob/master/docs/regional_case.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Follow the below procedure to run CTSM over a specific region of interest for a specific resolution.
+For example, to run over Scandinavia region (latitude 41N to 48N, longitude 4E to 42E) at 0.5 degree resolution:
+First produce the domain and surface data files for the region using the python script subset_surfdata.py available under the CTSM tools directory (~/ctsm/tools/contrib/).</p>
+<section id="domain-and-surface-data">
+<h1>Domain and surface data<a class="headerlink" href="#domain-and-surface-data" title="Permalink to this headline">¶</a></h1>
+<p>Change the variable values ln1 to 4.0,ln2 to 42.0, lt1 to 41.0 and lt2 to 48.0 in the subset_data.py.
+The python script file here:
+<a class="reference external" href="https://github.com/ESCOMP/CTSM/blob/master/tools/contrib/subset_data.py">https://github.com/ESCOMP/CTSM/blob/master/tools/contrib/subset_data.py</a></p>
+<p>This python script produces the domain file and surface data file.</p>
+</section>
+<section id="inputdata">
+<h1>Inputdata<a class="headerlink" href="#inputdata" title="Permalink to this headline">¶</a></h1>
+<p>Other inputdata files are needed:</p>
+<p>Use the already available inputdata stored under shared directory on both FRAM and SAGA machines.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">To</span> <span class="n">use</span> <span class="n">the</span> <span class="n">atmospheric</span> <span class="n">forcing</span> <span class="n">data</span> <span class="n">do</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+<span class="n">export</span> <span class="n">ATMDATA</span><span class="o">=/</span><span class="n">cluster</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">noresm</span><span class="o">/</span><span class="n">inputdata</span><span class="o">/</span><span class="n">atm</span><span class="o">/</span><span class="n">datm7</span><span class="o">/</span>
+</pre></div>
+</div>
+</section>
+<section id="definitions">
+<h1>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h1>
+<p>As mentioned earlier in this documentation, you need to define your project account (e.g. nn2806k) before running the model. To be sure that you are using the correct version of netcdf and practical purposes, we will export the paths and some environment variables :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export CESM_ACCOUNT=nn2806k
+export PROJECT=nn2806k
+export CTSMROOT=/cluster/home/$USER/ctsm
+
+export INC_NETCDF=/cluster/software/VERSIONS/netcdf.intel-4.3.3.1/
+export LIB_NETCDF=/cluster/software/VERSIONS/netcdf.intel-4.3.3.1/
+export NETCDF_ROOT=/cluster/software/VERSIONS/netcdf.intel-4.3.3.1
+</pre></div>
+</div>
+</section>
+<section id="make-a-case">
+<h1>Make a case<a class="headerlink" href="#make-a-case" title="Permalink to this headline">¶</a></h1>
+<p>To run the model with Satellite Phenology mode, do the following</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $CTSMROOT/cime/scripts
+./create_newcase -case ~/cases/SCA_SpRun -res CLM_USRDAT -compset I2000Clm50SpGs --machine abel --run-unsupported --project $CESM_ACCOUNT
+</pre></div>
+</div>
+<p>Here, the compset <strong>I2000Clm50SpGs</strong> initialize the model from 2000 conditions with GSWP3 atmospheric forcing data. If you want to run CTSM with BGC mode and force with CRU NCEP v7 data set, use <strong>I2000Clm50BgcCruGs</strong> compset. To see available compset aliases and their long names, type the following :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$CTSMROOT/cime/scripts/query_config --compsets clm
+</pre></div>
+</div>
+<p><strong>Note that</strong> you can use only the compsets with <strong>SGLC</strong> (Stub glacier (land ice) component) for single point and regional cases. Otherwise, simulation fails.</p>
+</section>
+<section id="set-up-the-case">
+<h1>Set up the case<a class="headerlink" href="#set-up-the-case" title="Permalink to this headline">¶</a></h1>
+<p>Now, we are setting up our test simulation for three years between 2000-2002.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ~/cases/SCA_SpRun
+export GRIDNAME=0.25_SCA
+export SCA_DATA=$MYCTSMDATA/share/domains/
+export ATMDOM=domain.0.25x0.25_SCA.nc
+
+./xmlchange DIN_LOC_ROOT=$MYCTSMDATA
+./xmlchange ATM_DOMAIN_PATH=$SCA_DATA,LND_DOMAIN_PATH=$SCA_DATA
+./xmlchange ATM_DOMAIN_FILE=$ATMDOM,LND_DOMAIN_FILE=$ATMDOM
+./xmlchange CLM_USRDAT_NAME=$GRIDNAME
+./xmlchange STOP_OPTION=nyears
+./xmlchange STOP_N=3
+./xmlchange NTASKS=16
+./xmlchange JOB_WALLCLOCK_TIME=&quot;03:59:00&quot;
+./xmlchange PROJECT=$CESM_ACCOUNT
+./xmlchange RUN_STARTDATE=&quot;2000-01-01&quot;
+./xmlchange RESUBMIT=&quot;0&quot;
+./xmlchange DATM_CLMNCEP_YR_ALIGN=&quot;2000&quot;
+./xmlchange DATM_CLMNCEP_YR_START=&quot;2000&quot;
+./xmlchange DATM_CLMNCEP_YR_END=&quot;2002&quot;
+./xmlchange DOUT_S=&quot;FALSE&quot;
+./xmlchange GMAKE_J=&quot;8&quot;
+./case.setup
+./preview_run
+</pre></div>
+</div>
+</section>
+<section id="customizing-the-clm-namelist">
+<h1>Customizing the CLM namelist<a class="headerlink" href="#customizing-the-clm-namelist" title="Permalink to this headline">¶</a></h1>
+<p>In order to define the location of surface data file for our Scandinavia region, we add the <strong>fsurdat</strong> setting to the land model’s namelist.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span> <span class="n">EOF</span> <span class="o">&gt;</span> <span class="n">user_nl_clm</span>
+<span class="n">fsurdat</span><span class="o">=</span><span class="s2">&quot;$MYCTSMDATA/lnd/clm2/surfdata_map/surfdata_0.25_SCA_hist_16pfts_Irrig_CMIP6_simyr2000_c190814.nc&quot;</span>
+<span class="n">EOF</span>
+</pre></div>
+</div>
+<p>If you run your simulation with <strong>BGC</strong> mode, then you need to set another surface data map as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span> <span class="n">EOF</span> <span class="o">&gt;</span> <span class="n">user_nl_clm</span>
+<span class="n">fsurdat</span><span class="o">=</span><span class="s2">&quot;$MYCTSMDATA/lnd/clm2/surfdata_map/surfdata_0.25_SCA_hist_78pfts_CMIP6_simyr2000_c190819.nc&quot;</span>
+<span class="n">EOF</span>
+</pre></div>
+</div>
+<p>If you want to print out only selected variables in hourly resolution in the model output files for each year:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span> <span class="n">EOF</span> <span class="o">&gt;</span> <span class="n">user_nl_clm</span>
+<span class="n">fsurdat</span><span class="o">=</span><span class="s2">&quot;$MYCTSMDATA/lnd/clm2/surfdata_map/surfdata_0.25_SCA_hist_16pfts_Irrig_CMIP6_simyr2000_c190814.nc&quot;</span>
+<span class="n">hist_empty_htapes</span> <span class="o">=</span> <span class="o">.</span><span class="n">true</span><span class="o">.</span>
+<span class="n">hist_fincl1</span> <span class="o">=</span> <span class="s1">&#39;TSA&#39;</span><span class="p">,</span> <span class="s1">&#39;TSKIN&#39;</span><span class="p">,</span> <span class="s1">&#39;EFLX_LH_TOT&#39;</span><span class="p">,</span> <span class="s1">&#39;FSH&#39;</span><span class="p">,</span> <span class="s1">&#39;WIND&#39;</span><span class="p">,</span> <span class="s1">&#39;TWS&#39;</span><span class="p">,</span> <span class="s1">&#39;SNOWLIQ&#39;</span><span class="p">,</span> <span class="s1">&#39;SNOWICE&#39;</span><span class="p">,</span> <span class="s1">&#39;SNOW_DEPTH&#39;</span><span class="p">,</span> <span class="s1">&#39;TSOI&#39;</span><span class="p">,</span> <span class="s1">&#39;H2OSOI&#39;</span>
+<span class="n">hist_nhtfrq</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">hist_mfilt</span> <span class="o">=</span> <span class="mi">365</span>
+<span class="n">EOF</span>
+</pre></div>
+</div>
+<p><strong>Note that</strong> the variable names (e.g. ‘TSA’, ‘TSKIN’, ‘EFLX_LH_TOT’, etc.) are following the CESM name convention.</p>
+</section>
+<section id="build-and-submit-the-case">
+<h1>Build and submit the case<a class="headerlink" href="#build-and-submit-the-case" title="Permalink to this headline">¶</a></h1>
+<p>Final step is to build the case and submit the job to the queue.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">case</span><span class="o">.</span><span class="n">build</span>
+<span class="o">./</span><span class="n">case</span><span class="o">.</span><span class="n">submit</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, CLM-Norway
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+           <strong> 
+          <dd><a href="/rtd-github-pages/en/master/">en</a></dd>
+           </strong> 
+        
+          
+          <dd><a href="/rtd-github-pages/es/master/">es</a></dd>
+          
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+          
+          <dd><a href="/rtd-github-pages/en/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/rtd-github-pages/en/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/rtd-github-pages/en/master/CLM-NorwayDoc-docs_en_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/rtd-github-pages/en/master/CLM-NorwayDoc-docs_en_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
