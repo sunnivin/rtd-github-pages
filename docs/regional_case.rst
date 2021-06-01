@@ -4,9 +4,9 @@ First produce the domain and surface data files for the region using the python 
 
 Domain and surface data
 ~~~~~~~~~~~~~~~~~~~~~~~
-Change the variable values ln1 to 4.0,ln2 to 42.0, lt1 to 41.0 and lt2 to 48.0 in the subset_surfdata.py.
+Change the variable values ln1 to 4.0,ln2 to 42.0, lt1 to 41.0 and lt2 to 48.0 in the subset_data.py.
 The python script file here:
-https://github.com/devarajun/CTSM/blob/master/tools/contrib/subset_surfdata
+https://github.com/ESCOMP/CTSM/blob/master/tools/contrib/subset_data.py
 
 This python script produces the domain file and surface data file.
 
